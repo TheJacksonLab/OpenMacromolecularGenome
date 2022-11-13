@@ -1,29 +1,29 @@
-**Open Macromolecular Genome**
+# Open Macromolecular Genome
 
 This repository contains python scripts to obtain Open Macromolecular Genome (OMG) data 
 from eMolecules and to train generative models.
 
-**Questions, problems?**
+## Questions, problems?
 
 Make a github issue. Please be as clear and descriptive as possible.
 
-**How to install**
+##How to install
 
-Requirements:
+###Requirements:
 
-via Anaconda (recommended way)
+###via Anaconda (recommended way)
 
-via pip
+###via pip
 
 Assuming you have all the requirements:
 
-**Examples**
+##Examples
 
-**Components**
+##Components
 
-**Authors**
+##Authors
 
-**Funding Acknowledgements**
+##Funding Acknowledgements
 
 
 
