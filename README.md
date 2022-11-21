@@ -3,6 +3,8 @@
 This repository contains python scripts to obtain Open Macromolecular Genome (OMG) data 
 from eMolecules and to train generative models.
 
+![alt text](https://github.com/TheJacksonLab/SeonghwanAutoencoder/blob/main/data/figure/schematic_diagram.jpg?raw=true)
+
 ## How to install
 
 ### Requirements:
