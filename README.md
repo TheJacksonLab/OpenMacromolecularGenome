@@ -1,7 +1,7 @@
 # Open Macromolecular Genome
 
-**This repository contains python scripts to obtain Open Macromolecular Genome (OMG) data 
-from eMolecules and to train generative models.**
+This repository contains python scripts to obtain Open Macromolecular Genome (OMG) data 
+from eMolecules and to train generative models.
 
 ![alt text](https://github.com/TheJacksonLab/SeonghwanAutoencoder/blob/main/data/figure/schematic_diagram.jpg?raw=True)
 
@@ -16,12 +16,12 @@ from eMolecules and to train generative models.**
 Assuming you have all the requirements:
 
 ## Scripts
-####1. data 
-####2. polymerization
-####3. Synthetic Complexity score (scscore)
-####4. molecule chef
-####5. SELFIES variational autoencoder (vae)
-####6. train
+1. data 
+2. polymerization
+3. Synthetic Complexity score (scscore)
+4. molecule chef
+5. SELFIES variational autoencoder (vae)
+6. train
 
 ## Authors
 
