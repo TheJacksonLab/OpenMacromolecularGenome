@@ -4,6 +4,7 @@ import time
 import numpy as np
 import pandas as pd
 
+sys.path.append('/home/sk77/PycharmProjects/publish/OMG')
 import selfies as sf
 
 import torch
@@ -22,7 +23,6 @@ from rdkit.Chem import Draw
 from rdkit.Chem.Crippen import MolLogP
 from rdkit.Chem.rdmolops import GetShortestPath
 
-sys.path.append('/home/sk77/PycharmProjects/publish/OMG')
 from vae.decoder.torch import Decoder
 from vae.encoder.torch import Encoder, CNNEncoder
 from vae.property_predictor.torch import PropertyNetworkPredictionModule

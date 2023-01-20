@@ -1,5 +1,8 @@
 import numpy as np
 import pandas as pd
+
+import sys
+sys.path.append('/home/sk77/PycharmProjects/publish/OMG')
 import selfies as sf
 
 

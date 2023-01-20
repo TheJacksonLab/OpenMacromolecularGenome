@@ -9,7 +9,7 @@ from rdkit import Chem
 from rdkit.Chem import RDConfig
 from scipy import stats
 
-sys.path.append('/home/sk77/PycharmProjects/polymer')
+sys.path.append('/home/sk77/PycharmProjects/publish/OMG')
 from scscore.scscore import SCScorer
 
 

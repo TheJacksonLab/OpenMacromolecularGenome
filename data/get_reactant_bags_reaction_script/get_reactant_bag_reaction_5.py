@@ -7,7 +7,7 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from itertools import product
 
-sys.path.append('/home/sk77/PycharmProjects/polymer')
+sys.path.append('/home/sk77/PycharmProjects/publish/OMG')
 from polymerization import BasePolymerization, Polymerization
 
 

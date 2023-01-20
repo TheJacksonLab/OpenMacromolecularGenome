@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import time
 
+sys.path.append('/home/sk77/PycharmProjects/publish/OMG')
 import selfies as sf
 
 import torch
@@ -21,8 +22,6 @@ from rdkit.Chem.AllChem import GetMorganFingerprintAsBitVect
 
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
-
-sys.path.append('/home/sk77/PycharmProjects/publish/OMG')
 
 from polymerization import Polymerization
 
