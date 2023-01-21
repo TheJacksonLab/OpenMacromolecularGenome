@@ -45,5 +45,6 @@ Seonghwan Kim, Charles M. Schroeder, and Nicholas E. Jackson
 This work was supported by the IBM-Illinois Discovery Accelerator Institute. N.E.J. thanks the 3M Nontenured Faculty Award for support of this research. We thank Jed Pitera and Jeffrey Moore for critical readings of the manuscript and Prof. Tengfei Luo for assistance with the PI1M dataset.
 
 <p align="right">
-<img src=https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/OMG.png" width="200" height="60"> 
+<img src="https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/OMG.png" width="200" height="60"> 
 </p>
+
