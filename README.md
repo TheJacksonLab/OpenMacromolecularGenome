@@ -3,7 +3,7 @@
 This repository contains python scripts to construct the Open Macromolecular Genome (OMG) database from [eMolecules](https://www.emolecules.com/) and train generative models.
 
 <p align="center">
-<img src="https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/schematic_diagram.jpg" width="400" height="400">
+<img src="https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/schematic_diagram.jpg" width="500" height="500">
 </p>
 
 ## Set up Python environment with Anaconda 
