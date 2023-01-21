@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+"""
+This file is modified to incorporate an asterisk (*). The asterisk rules were added (Sep 1, 2022) to the
+original work, https://github.com/aspuru-guzik-group/selfies.
+"""
+
 
 """
 SELFIES: a robust representation of semantically constrained graphs with an

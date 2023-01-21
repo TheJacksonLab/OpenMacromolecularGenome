@@ -1,26 +1,27 @@
 # Open Macromolecular Genome
 
-This repository contains python scripts to construct Open Macromolecular Genome (OMG) data from eMolecules and train generative models.
+This repository contains python scripts to construct the Open Macromolecular Genome (OMG) database from [eMolecules](https://www.emolecules.com/) and train generative models.
 
 <p align="center">
-<img src="https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/schematic_diagram.jpg" width="300" height="300">
+<img src="https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/schematic_diagram.jpg" width="400" height="400">
 </p>
 
-## Python environment installation with Anaconda 
+## Set up Python environment with Anaconda 
 ```
 conda env create -f environment.yml
-```
-To run a script, a file path in the script should be modified to be consistent with an attempted directory.  
+``` 
 
 ## Script components
+To run a script, a file path in the script should be modified to be consistent with an attempted directory.
+
 ### 1. data
-This directory contains scripts to construct the OMG database from eMolecules.
+This directory contains scripts to construct the OMG database from [eMolecules](https://www.emolecules.com/).
 
 ### 2. scscore
 This directory contains a script to calculate SC score obtained from https://github.com/connorcoley/scscore.
 
 ### 3. polymerization
-This directory contains the OMG polymerization algorithms based.
+This directory contains the OMG polymerization algorithms.
 
 ### 4. selfies 
 This directory contains modified SELFIES scripts to incorporate asterisk (*). The asterisk rules were added to the original work, https://github.com/aspuru-guzik-group/selfies
@@ -35,7 +36,7 @@ and their scripts, https://github.com/john-bradshaw/molecule-chef.
 This directory contains a variational autoencoder model. The scripts were written referring to https://github.com/aspuru-guzik-group/selfies/blob/master/examples/vae_example/chemistry_vae.py
 
 ### 7. train
-This directory contains scripts to train Molecule Chef and SELFIES VAE. These scripts were also written by referring to 
+This directory contains scripts to train Molecule Chef and SELFIES VAE. These scripts were written by referring to 
 https://github.com/john-bradshaw/molecule-chef and https://github.com/aspuru-guzik-group/selfies/blob/master/examples/vae_example/chemistry_vae.py.
 
 ## Authors
