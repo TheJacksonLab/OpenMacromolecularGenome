@@ -6,37 +6,37 @@ This repository contains python scripts to construct Open Macromolecular Genome 
 <img src="https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/schematic_diagram.jpg" width="300" height="300">
 </p>
 
-## Python environment
+## Python environment installation with Anaconda 
 ```
 conda env create -f environment.yml
 ```
-To run a script, a file path in the script should be modified to be consistent with a user environment.  
+To run a script, a file path in the script should be modified to be consistent with an attempted directory.  
 
 ## Script components
 ### 1. data
 This directory contains scripts to construct the OMG database from eMolecules.
 
-### 2. molecule_chef 
-This directory contains the Molecule Chef generative model. The scripts were written referring to the original work,
-[Bradshaw, J.; Paige, B.; Kusner, M. J.; Segler, M.; Hernández-Lobato, J. M. A Model to Search for Synthesizable Molecules. 
-In Advances in Neural Information Processing Systems; Curran Associates, Inc., 2019; Vol. 32.](https://arxiv.org/abs/1906.05221), 
-and their scripts, https://github.com/john-bradshaw/molecule-chef. 
+### 2. scscore
+This directory contains a script to calculate SC score obtained from https://github.com/connorcoley/scscore.
 
 ### 3. polymerization
 This directory contains the OMG polymerization algorithms based.
 
-### 4. scscore
-This directory contains a script to calculate SC score obtained from https://github.com/connorcoley/scscore.
+### 4. selfies 
+This directory contains modified SELFIES scripts to incorporate asterisk (*). The asterisk rules were added to the original work, https://github.com/aspuru-guzik-group/selfies
 
-### 5. vae 
+### 5. molecule_chef 
+This directory contains the Molecule Chef generative model. The scripts were written referring to the original work,
+[Bradshaw, J.; Paige, B.; Kusner, M. J.; Segler, M.; Hernández-Lobato, J. M. A Model to Search for Synthesizable Molecules. 
+In Advances in Neural Information Processing Systems; Curran Associates, Inc., 2019; Vol. 32.](https://arxiv.org/abs/1906.05221), 
+and their scripts, https://github.com/john-bradshaw/molecule-chef.
+
+### 6. vae 
 This directory contains a variational autoencoder model. The scripts were written referring to https://github.com/aspuru-guzik-group/selfies/blob/master/examples/vae_example/chemistry_vae.py
 
-### 6. train
+### 7. train
 This directory contains scripts to train Molecule Chef and SELFIES VAE. These scripts were also written by referring to 
-https://github.com/john-bradshaw/molecule-chef and https://github.com/aspuru-guzik-group/selfies/blob/master/examples/vae_example/chemistry_vae.py. 
-
-### 7. SELFIES 
-This directory contains modified SELFIES scripts to incorporate asterisk (*). The asterisk rules were added to the original work, https://github.com/aspuru-guzik-group/selfies  
+https://github.com/john-bradshaw/molecule-chef and https://github.com/aspuru-guzik-group/selfies/blob/master/examples/vae_example/chemistry_vae.py.
 
 ## Authors
 Seonghwan Kim, Charles M. Schroeder, and Nicholas E. Jackson
