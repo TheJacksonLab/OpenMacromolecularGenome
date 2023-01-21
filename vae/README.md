@@ -1,0 +1,1 @@
+This directory contains a variational autoencoder model. The scripts were written referring to https://github.com/aspuru-guzik-group/selfies/blob/master/examples/vae_example/chemistry_vae.py

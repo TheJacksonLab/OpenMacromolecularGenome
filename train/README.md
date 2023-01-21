@@ -1,0 +1,2 @@
+This directory contains scripts to train Molecule Chef and SELFIES VAE. These scripts were written by referring to 
+https://github.com/john-bradshaw/molecule-chef and https://github.com/aspuru-guzik-group/selfies/blob/master/examples/vae_example/chemistry_vae.py.
