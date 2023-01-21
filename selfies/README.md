@@ -1,0 +1,1 @@
+This file is modified to incorporate an asterisk (*). The asterisk rules were added (Sep 1, 2022) to the original work, https://github.com/aspuru-guzik-group/selfies.
