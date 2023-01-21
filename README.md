@@ -3,7 +3,7 @@
 This repository contains python scripts to construct Open Macromolecular Genome (OMG) data from eMolecules and train generative models.
 
 <p align="center">
-<img src="https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/schematic_diagram.jpg" width="500" height="500">
+<img src="https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/schematic_diagram.jpg" width="300" height="300">
 </p>
 
 ## Python environment
@@ -45,5 +45,5 @@ Seonghwan Kim, Charles M. Schroeder, and Nicholas E. Jackson
 This work was supported by the IBM-Illinois Discovery Accelerator Institute. N.E.J. thanks the 3M Nontenured Faculty Award for support of this research. We thank Jed Pitera and Jeffrey Moore for critical readings of the manuscript and Prof. Tengfei Luo for assistance with the PI1M dataset.
 
 <p align="right">
-<img src="<img src=https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/OMG.png" width="200" height="60">" 
+<img src=https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/OMG.png" width="200" height="60"> 
 </p>
