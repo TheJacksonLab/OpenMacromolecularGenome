@@ -9,8 +9,6 @@ import pandas as pd
 import torch
 import torch.nn.functional as f
 
-import selfies as sf
-
 from math import ceil
 
 from sklearn.decomposition import PCA
@@ -27,6 +25,8 @@ from rdkit.Chem.rdmolops import GetShortestPath
 
 
 sys.path.append('/home/sk77/PycharmProjects/publish/OMG')
+import selfies as sf
+
 from vae.preprocess import get_selfie_and_smiles_encodings_for_dataset, multiple_smile_to_hot, multiple_selfies_to_hot
 from vae.decoder.torch import Decoder
 from vae.encoder.torch import CNNEncoder
