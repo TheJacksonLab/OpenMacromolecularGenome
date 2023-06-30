@@ -1,20 +1,47 @@
 import sys
+from pathlib import Path
 import pandas as pd
-
+import argparse
 from screen_reactant_smiles import classify_monomers_to_csv
+
+
+def get_cli_args():
+    # Create an argument parser
+    parser = argparse.ArgumentParser(description='Process command-line arguments.')
+    # Add arguments
+    # Add positional arguments
+    parser.add_argument('save_directory', type=str, nargs='?', help='Directory to save the data',
+                        default='database')
+    parser.add_argument('positional_iteration', type=int, nargs='?', help='Iteration number', default=1)
+    parser.add_argument('positional_start_idx', type=int, nargs='?', help='Start index', default=None)
+    parser.add_argument('positional_end_idx', type=int, nargs='?', help='End index', default=None)
+    # Add optional arguments with flags
+    parser.add_argument('-i', '--iteration', type=int, help='Iteration Number', default=None)
+    parser.add_argument('-s', '--start_idx', type=int, help='Start Index', default=None)
+    parser.add_argument('-e', '--end_idx', type=int, help='End Index', default=None)
+    # Parse the arguments
+    return parser.parse_args()
+
 
 if __name__ == "__main__":
     # load a law data
-    df_smi = pd.read_csv('/home/sk77/PycharmProjects/publish/OMG/data/version.smi', sep=' ')
+    version_path = Path(__file__).resolve().parent.parent / 'version.smi'
+    df_smi = pd.read_csv(version_path, sep=' ')
 
-    # load environmental variables
-    save_directory = sys.argv[1]
-    print(save_directory, flush=True)
-    iteration = int(sys.argv[2])
-    start_idx = int(sys.argv[3])
-    print(start_idx, flush=True)
-    end_idx = int(sys.argv[4])
-    print(end_idx, flush=True)
+    args = get_cli_args()
+
+    # Retrieve the argument values
+    save_directory = Path(args.save_directory)
+    iteration = args.iteration or args.positional_iteration
+    start_idx = args.start_idx or args.positional_start_idx or 0
+    end_idx = args.end_idx or args.positional_end_idx
+    end_idx = end_idx if end_idx is not None else len(df_smi)
+
+    # Print the loaded variables (for demonstration purposes)
+    print(f"Save Directory: {save_directory}", flush=True)
+    print(f"Iteration: {iteration}", flush=True)
+    print(f"Start Index: {start_idx}", flush=True)
+    print(f"End Index: {end_idx}", flush=True)
 
     # parallel process
     df_smi = df_smi.iloc[start_idx: end_idx].reset_index(drop=True)
@@ -39,6 +66,7 @@ if __name__ == "__main__":
         'terminal_diene': '[CX3H2]=[CX3H1]',
         'vinyl': '[CX3;!R]=[CX3]'
     }
+
     classify_monomers_to_csv(
         df_smi=df_smi,
         sub_structure_dict=sub_structure_dict,

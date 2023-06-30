@@ -44,9 +44,8 @@ def check_isotope(mol):
 
 def classify_monomers_to_csv(df_smi: pd.DataFrame, sub_structure_dict: dict, save_directory, iteration):
     # set save directory
-    save_directory = os.path.join(os.getcwd(), save_directory)
-    if not os.path.exists(save_directory):
-        Path(save_directory).mkdir(parents=True)
+    save_directory = Path.cwd() / save_directory
+    save_directory.mkdir(parents=True, exist_ok=True)
 
     # make df_smi
     df_smi = df_smi.rename(columns={'isosmiles': 'smiles'})
