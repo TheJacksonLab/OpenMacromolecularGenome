@@ -6,12 +6,22 @@ This repository contains python scripts to construct the Open Macromolecular Gen
 <img src="https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/schematic_diagram.jpg" width="500" height="500">
 </p>
 
+# Setup
 ## Set up Python environment with Anaconda 
 ```
 conda env create -f environment.yml
 ``` 
+## eMolecules Database
+To begin, you will need the `version.smi` file from eMolecules.
+Download here: https://www.emolecules.com/structure_download_june_2023
 
-## Script components
+Place `version.smi` in the `data` directory.
+```
+|-data
+    |-version.smi
+```
+
+# Script components
 To run a script, a file path in the script should be modified to be consistent with an attempted directory.
 
 ### 1. data
