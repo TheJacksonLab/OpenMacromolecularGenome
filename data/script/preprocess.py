@@ -12,12 +12,12 @@ def get_cli_args():
     # Add arguments
     # Add positional arguments
     parser.add_argument('save_directory', type=str, help='Relative directory to save the processed data', default=None)
-    parser.add_argument('file_name', type=int, help='File name to be saved to the save_directory', default=None)
+    parser.add_argument('file_name', type=str, help='File name to be saved to the save_directory', default=None)
     parser.add_argument('positional_start_idx', type=int, help='Start index to read from the "version.smi"', default=None)
     parser.add_argument('positional_end_idx', type=int, help='End index to read from the "version.smi"', default=None)
     # Add optional arguments with flags
-    parser.add_argument('-d', '--save_directory', type=int, help='Directory to save the processed data', default=None)
-    parser.add_argument('-n', '--file_name', type=int, help='File name to be saved to the save_directory', default=None)
+    parser.add_argument('-d', '--save_directory', type=str, help='Directory to save the processed data', default=None)
+    parser.add_argument('-n', '--file_name', type=str, help='File name to be saved to the save_directory', default=None)
     parser.add_argument('-s', '--start_idx', type=int, help='Start index to read from the "version.smi"', default=None)
     parser.add_argument('-e', '--end_idx', type=int, help='End index to read from the "version.smi"', default=None)
     # Parse the arguments
