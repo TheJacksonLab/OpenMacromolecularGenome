@@ -11,7 +11,7 @@ This repository contains python scripts to construct the Open Macromolecular Gen
 ```
 conda env create -f environment.yml
 ``` 
-## eMolecules Database
+## eMolecules database
 To begin, you will need the `version.smi` file from eMolecules.
 Download here: https://marketing.emolecules.com/incremental-file-download
 
