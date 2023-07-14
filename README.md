@@ -13,7 +13,7 @@ conda env create -f environment.yml
 ``` 
 ## eMolecules Database
 To begin, you will need the `version.smi` file from eMolecules.
-Download here: https://www.emolecules.com/structure_download_june_2023
+Download here: https://marketing.emolecules.com/incremental-file-download
 
 Place `version.smi` in the `data` directory.
 ```
