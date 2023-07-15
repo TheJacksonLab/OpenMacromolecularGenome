@@ -1,20 +1,47 @@
-import sys
+import argparse
 import pandas as pd
+
+from pathlib import Path
 
 from screen_reactant_smiles import classify_monomers_to_csv
 
+
+def get_cli_args():
+    # Create an argument parser
+    parser = argparse.ArgumentParser(description='Process command-line arguments.')
+    # Add arguments
+    # Add positional arguments
+    parser.add_argument('save_directory', type=str, help='Relative directory to save the processed data', default=None)
+    parser.add_argument('file_name', type=str, help='File name to be saved to the save_directory', default=None)
+    parser.add_argument('positional_start_idx', type=int, help='Start index to read from the "version.smi"', default=None)
+    parser.add_argument('positional_end_idx', type=int, help='End index to read from the "version.smi"', default=None)
+    # Add optional arguments with flags
+    parser.add_argument('-d', '--save_directory', type=str, help='Directory to save the processed data', default=None)
+    parser.add_argument('-n', '--file_name', type=str, help='File name to be saved to the save_directory', default=None)
+    parser.add_argument('-s', '--start_idx', type=int, help='Start index to read from the "version.smi"', default=None)
+    parser.add_argument('-e', '--end_idx', type=int, help='End index to read from the "version.smi"', default=None)
+    # Parse the arguments
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
     # load a law data
-    df_smi = pd.read_csv('/home/sk77/PycharmProjects/publish/OMG/data/version.smi', sep=' ')
+    version_path = Path(__file__).resolve().parent.parent / 'version.smi'
+    df_smi = pd.read_csv(version_path, sep=' ')
 
-    # load environmental variables
-    save_directory = sys.argv[1]
-    print(save_directory, flush=True)
-    iteration = int(sys.argv[2])
-    start_idx = int(sys.argv[3])
-    print(start_idx, flush=True)
-    end_idx = int(sys.argv[4])
-    print(end_idx, flush=True)
+    args = get_cli_args()
+
+    # Retrieve the argument values
+    save_directory = Path(args.save_directory)
+    file_name = args.file_name
+    start_idx = args.start_idx or args.positional_start_idx or 0
+    end_idx = args.end_idx or args.positional_end_idx
+
+    # Print the loaded variables (for demonstration purposes)
+    print(f"Save Directory: {save_directory}", flush=True)
+    print(f"File Name: {file_name}", flush=True)
+    print(f"Start Index: {start_idx}", flush=True)
+    print(f"End Index: {end_idx}", flush=True)
 
     # parallel process
     df_smi = df_smi.iloc[start_idx: end_idx].reset_index(drop=True)
@@ -39,9 +66,10 @@ if __name__ == "__main__":
         'terminal_diene': '[CX3H2]=[CX3H1]',
         'vinyl': '[CX3;!R]=[CX3]'
     }
+
     classify_monomers_to_csv(
         df_smi=df_smi,
         sub_structure_dict=sub_structure_dict,
         save_directory=save_directory,
-        iteration=iteration
+        file_name=file_name
     )
