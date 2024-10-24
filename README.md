@@ -1,7 +1,7 @@
 # Open Macromolecular Genome
 
 This repository contains python scripts to construct the Open Macromolecular Genome (OMG) database from [eMolecules](https://www.emolecules.com/) and train generative models described in the [paper](https://pubs.acs.org/doi/10.1021/acspolymersau.3c00003).
-The OMG monomers and polymers are available at [Zenodo](https://zenodo.org/records/7556992) 
+The OMG monomers and polymers are available at [Zenodo](https://zenodo.org/records/7556992).
 
 <p align="center">
 <img src="https://github.com/TheJacksonLab/OpenMacromolecularGenome/blob/main/data/figure/schematic_diagram.jpg" width="500" height="500">
